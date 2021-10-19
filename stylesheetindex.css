@@ -63,6 +63,19 @@ html {
     margin-top: 17px;
 }
 
+@media only screen and (max-width:685px){
+    #imagem {
+        width: 20%;
+    }
+    #meio {
+        display: none;
+    }
+    #direita {
+        width: 80%;
+    }
+}
+
+
 /* imagem */
 #primeira img{
     position: absolute;
@@ -75,7 +88,7 @@ html {
 #primeira #frase{
     position: relative;
     text-align: center;
-    width: 30%;
+    width: 280;
     padding-top: 25vh;
     font-size: 25;
     margin: 0 auto;
