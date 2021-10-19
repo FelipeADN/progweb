@@ -1,0 +1,97 @@
+/* todo o documento */
+html {
+    scroll-behavior: smooth;
+}
+
+/* slogan */
+#slogan{
+    position: relative;
+    background-color: rgb(80, 100, 200);
+}
+#slogan p{
+    margin: 0;
+    text-align: center;
+}
+
+/* topo */
+#menu{
+    position: relative;
+    padding: 3vh 0;
+    width: 100%;
+    height: 7vh;
+    /* background-color: rgb(80, 60, 200); */
+    background-color: rgb(103,58,183);
+}
+
+/* imagem na esquerda */
+#imagem{
+    float: left;
+    width: 15%;
+}
+#imagem img{
+    float: left;
+    padding: 0 0 0 3vh;
+    height: 7vh;
+}
+
+/* menu no meio */
+#meio {
+    float: left;
+    height: 7vh;
+    width: 51.66%;
+    display:flex;
+    justify-content: right;
+    overflow: hidden;
+}
+
+/* botoes da direita */
+#direita {
+    float: right;
+    padding: 0;
+    margin: 0;
+    height: 7vh;
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+#direita li{
+    padding: 0 1vh 0 0;
+    display: inline-block;
+}
+.mdl-textfield{
+    margin-top: 17px;
+}
+
+/* imagem */
+#primeira img{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* frase cativante*/
+#primeira #frase{
+    position: relative;
+    text-align: center;
+    width: 30%;
+    padding-top: 25vh;
+    font-size: 25;
+    margin: 0 auto;
+}
+
+/* frase criar conta */
+#primeira #conta{
+    position: relative;
+    text-align: center;
+    display: block;
+    font-size: 15;
+    margin: 0 auto;
+}
+
+/* botao criar conta */
+#primeira button{
+    margin: 0 auto;
+    display: block;
+}
