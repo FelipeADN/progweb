@@ -1,0 +1,13 @@
+#titulo{
+    font-weight:300;
+}
+#exterior{
+    padding: 0;
+}
+#principal{
+    text-align: center;
+    margin: auto;
+}
+#mostrarSenha{
+    text-align: left;
+}
