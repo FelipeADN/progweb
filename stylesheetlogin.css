@@ -1,0 +1,19 @@
+#titulo{
+    font-weight:300;
+}
+#exterior{
+    height: 100%;
+    padding: 0;
+}
+#principal{
+    text-align: center;
+    margin: auto;
+}
+#criar{
+    color: blue;
+    cursor: pointer;
+    margin: 10px;
+}
+#mostrarSenha{
+    text-align: left;
+}
