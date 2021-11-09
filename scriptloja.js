@@ -4,7 +4,7 @@ var dados = [[0, "Maple Syrup", "maple.jpg", "Lorem ipsum dolor sit amet, consec
 [3, "Maple Syrup4", "maple.jpg","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin est augue, molestie sed rhoncus sed.", false, 10]];
 //matriz com os dados
 
-var storage = []; //vetor com produtos que serao adicionado no webstorage
+var storage = JSON.parse(window.localStorage.getItem("carrinho")); //vetor com produtos que serao adicionado no webstorage
 
 window.onload = function(){ //funcoes que executam quando a pagina e carregada
     teste();
@@ -17,9 +17,9 @@ function teste(){ //atualiza os produtos que ja foram ou nao adicionados no carr
         for (var i = 0 ; i < carrinho.length; i++){
             if (carrinho[i][4] == true) {
                 id = carrinho[i][0];
-                for (var i = 0; i < dados.length; i++){
-                    if (dados[i][0] == id){
-                        dados[i][4] = true;
+                for (var y = 0; y < dados.length; y++){
+                    if (dados[y][0] == id){
+                        dados[y][4] = true;
                     }
                 }
             }
