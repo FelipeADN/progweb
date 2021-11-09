@@ -4,7 +4,7 @@ var dados = [[0, "Maple Syrup", "maple.jpg", "Lorem ipsum dolor sit amet, consec
 [3, "Maple Syrup4", "maple.jpg","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin est augue, molestie sed rhoncus sed.", false, 10]];
 //matriz com os dados
 
-var storage = JSON.parse(window.localStorage.getItem("carrinho")); //vetor com produtos que serao adicionado no webstorage
+var storage = []; //vetor com produtos que serao adicionado no webstorage
 
 window.onload = function(){ //funcoes que executam quando a pagina e carregada
     teste();
@@ -14,6 +14,7 @@ function teste(){ //atualiza os produtos que ja foram ou nao adicionados no carr
     var carrinho = JSON.parse(window.localStorage.getItem("carrinho"));
 
     if (carrinho != null){
+        storage = JSON.parse(window.localStorage.getItem("carrinho"));
         for (var i = 0 ; i < carrinho.length; i++){
             if (carrinho[i][4] == true) {
                 id = carrinho[i][0];
