@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.deep_purple-red.min.css">
         <link rel="stylesheet" href="stylesheetindex.css">
         <script src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-        <script src="script.js"></script>
+        <script src="scriptindex.js"></script>
     </head>
     
     <body>
@@ -16,14 +16,15 @@
         </header>
 
         <header id="menu">
-            <div id="imagem">
-                <img src="temporario.svg" alt="logo">
+            <div id="marca">
+                <img src="logo.png" alt="logo">
+                <h3>Panquecas</h3>
             </div>
             <div id="meio"> 
                 <a href="#primeira" class="mdl-layout__tab">crie sua conta</a>
-                <a href="#scroll-tab-3" class="mdl-layout__tab">produtos</a>
-                <a href="#scroll-tab-4" class="mdl-layout__tab">video</a>
-                <a href="#scroll-tab-5" class="mdl-layout__tab">fim</a>
+                <a href="#segunda" class="mdl-layout__tab">produtos</a>
+                <a href="#terceira" class="mdl-layout__tab">video</a>
+                <a href="#quarta" class="mdl-layout__tab">fim</a>
             </div>
             <ul id="direita">
                 <li><form><div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
@@ -40,16 +41,83 @@
             </ul>
         </header>
 
-        <div id="primeira">
-            <img src="panqueca.jpg" alt="panqueca">
-            <p id="frase">Nós da empresa ... buscamos sempre o seu conforto deixando o seu café da manhã e seus lanches mais doces e alegres! =)</p>
+        <div class="primeira"  id="primeira">
+            <h1 id="frase">Nós da panquecas buscamos sempre o seu conforto deixando o seu café da manhã e seus lanches mais doces e alegres! =)</h1>
             <p id="conta">Caso não tenha uma conta, clique aqui!</p>
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="location.href='cadastro.html'">Cadastro</button>
-            
+        </div>
+
+        <div class="segunda" id="segunda">
+            <h2 id="favoritos">Os favoritos</h2>
+            <div id="deck">
+                
+
+            </div>
+
+            <div id="container4">
+                
+            </div>
+
+            <div id="maisprodutos">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored" onclick="location.href='loja.html'">Mais produtos</button>
+            </div>
+        </div>
+
+        <div class="terceira" id="terceira">
+            <h2 id="demonstracao">Demonstração</h2>
+            <iframe id="video" width="1280" height="720" src="https://www.youtube.com/embed/p8IAZrSZTxw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         
-        <footer>
-
-        </footer>
+        <div class="quarta" id="quarta">
+            <div id="depoimentos">
+                <div class="mdl-card">
+                    <div class="mdl-card__title">
+                        <ul>
+                        <li><img src="pessoa.png" alt="face" id="face"></li>
+                        <li><img src="cincoestrelas.png" alt="estrelas" id="estrelas"></li>
+                        <li><h2>Depoimentos</h2></li>
+                        </ul>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin est augue, molestie sed rhoncus sed." - Jeff</p>
+                    </div>
+                    <div class="mdl-card__actions">
+                        <button><</button>
+                        <button>></button>
+                    </div>
+                </div>
+            </div>
+            <div id="endereco">
+                <table>
+                    <ul>
+                    <img src="mapa.png" alt="">
+                    </ul>
+                    <ul id="texto">
+                    <li><h1>Onde nos encontrar?</h1></li>
+                    <li><p>Endereço: Rua Lorem Ipsum, 1234 - Centro, Curitiba - PR, 80420-000</p></li>
+                    </ul>
+                </table>
+            </div>
+            <footer class="mdl-mini-footer">
+                <div class="mdl-mini-footer__left-section">
+                    <div class="mdl-logo">Redes sociais:</div>
+                    <ul class="mdl-mini-footer__link-list">
+                    <li><a href="https://www.facebook.com">Facebook</a></li>
+                    <li><a href="http://www.twitter.com">Twitter</a></li>
+                    <li><a href="http://www.pinterest.com">Pinterest</a></li>
+                    <li><a href="http://www.instagram.com">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="mdl-mini-footer__right-section">
+                    <div class="mdl-logo">Contato:</div>
+                    <ul class="mdl-mini-footer__link-list">
+                    <li><span>(12)1234-1234</span></li>
+                    <li><span>email@email.com</span></li>
+                    <li></li>
+                    <li></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
     </body>
 </html>

@@ -6,11 +6,14 @@ html {
 /* slogan */
 #slogan{
     position: relative;
+    height: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(80, 100, 200);
 }
 #slogan p{
     margin: 0;
-    text-align: center;
 }
 
 /* topo */
@@ -19,26 +22,32 @@ html {
     padding: 3vh 0;
     width: 100%;
     height: 7vh;
-    /* background-color: rgb(80, 60, 200); */
     background-color: rgb(103,58,183);
 }
 
 /* imagem na esquerda */
-#imagem{
+#marca{
     float: left;
-    width: 15%;
+    width: 25%;
 }
-#imagem img{
+#marca img{
     float: left;
     padding: 0 0 0 3vh;
     height: 7vh;
+}
+#marca h3{
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
 }
 
 /* menu no meio */
 #meio {
     float: left;
     height: 7vh;
-    width: 51.66%;
+    width: 41.66%;
     display:flex;
     justify-content: right;
     overflow: hidden;
@@ -63,7 +72,8 @@ html {
     margin-top: 17px;
 }
 
-@media only screen and (max-width:685px){
+/* para telas menores */
+@media only screen and (max-width:768px){
     #imagem {
         width: 20%;
     }
@@ -76,35 +86,385 @@ html {
 }
 
 
-/* imagem */
-#primeira img{
-    position: absolute;
-    height: 100vh;
+/* primeira pagina */
+.primeira{
+    background-image: url("panqueca.jpg");
+    background-size: cover;
+    background-position: 90%;
+    height: 100%;
     width: 100%;
-    object-fit: cover;
 }
 
-/* frase cativante*/
-#primeira #frase{
-    position: relative;
+/* frase cativante */
+.primeira #frase{
     text-align: center;
-    width: 280;
-    padding-top: 25vh;
-    font-size: 25;
+    width: 30vw;
+    padding-top: 30vh;
+    font-size: 3vh;
     margin: 0 auto;
 }
 
 /* frase criar conta */
-#primeira #conta{
-    position: relative;
+.primeira #conta{
     text-align: center;
-    display: block;
-    font-size: 15;
+    font-size: 2vh;
     margin: 0 auto;
 }
 
 /* botao criar conta */
-#primeira button{
+.mdl-button{
     margin: 0 auto;
     display: block;
+}
+
+/* para telas em posicao retrato */
+@media only screen and (orientation:portrait){
+    .primeira #frase{
+        width: 30vh;
+    }
+}
+
+
+/* segunda pagina */
+.segunda{
+    background-image: url("cafe.jpg");
+    background-size: cover;
+    background-position: 75%;
+    height: 100%;
+    width: 100%;
+}
+
+/* titulo da pagina*/
+.segunda #favoritos {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    font-size: 5vh;
+    margin: 0;
+}
+
+/* cards */
+.segunda #deck{ /* container com os cards */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#card4{ /* cartao para telas menores */
+    display: none;
+}
+.segunda .mdl-card{ /* cada cartao */
+    height: 60vh;
+    width: 30vw;
+    background-color: rgb(103,58,183);
+    border-radius: 10px;
+    margin: 0 2vw;
+}
+.segunda .mdl-card__title-text{ /* titulo do cartao */
+    font-weight: 400;
+    font-size: 3vh;
+}
+.segunda .mdl-card__media{ /* local da imagem do cartao */
+    height: 30vh;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+.segunda img{ /* imagem do cartao */
+    width: 100%;
+    object-fit: cover;
+}
+.segunda .mdl-card__supporting-text p{ /* descricao do cartao */
+    line-height: 1.2em;
+    font-size: 2.5vh;
+    margin: 0;
+}
+.segunda .mdl-card__supporting-text{ /* local da descricao do cartao */
+    height: 20%;
+    padding: 8px;
+    overflow: visible;
+}
+.segunda .mdl-card__actions{
+    position: absolute;
+    bottom: 0%;
+    background-color: rgb(103,58,183);
+}
+
+/* botao (mais produtos)*/
+.segunda #maisprodutos{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+}
+
+/* para telas menores em posicao retrato*/
+@media only screen and (orientation:portrait){
+    .segunda .mdl-card:nth-child(3){ /* cartao da direita desaparece */
+        display: none;
+    }
+
+    /* card de baixo */
+    #container4{ /* area do cartao*/
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    /* altura do cartao menos a margem */
+    #card4{ /* cartao de baixo */
+        margin: 4vw 0 0 0;
+        display: block;
+        width: 84vw; /* comprimento dos dois cartoes mais suas margens */
+        height: 46vh; 
+        overflow: visible;
+    }
+    #card4 .mdl-card__media{ /* area da imagem do cartao de baixo */
+        height: 80%;
+        overflow: hidden;
+    }
+    #card4 .mdl-card__actions{
+        overflow: visible;
+        bottom: 0%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 100%;
+        background-color: rgb(103,58,183);
+    }
+    
+    /* titulo da pagina */
+    .segunda #favoritos{
+        height: 10vh;
+    }
+
+    /* cards */
+    .segunda .mdl-card{ /* cada cartao */
+        height: 30vh;
+        width: 40vw;
+    }
+    .segunda .mdl-card__title-text{ /* titulo do cartao*/
+        font-size: 2vh;
+    }
+    .segunda .mdl-card__title{ /* area do titulo do cartao */
+        padding: 10px;
+    }
+    .segunda .mdl-card__supporting-text{ /* descricao do cartao */
+        display: none;
+    }
+    .segunda .mdl-card__media{ /* imagem do cartao */
+        height: 100%;
+        overflow: hidden;
+    }
+    .segunda .mdl-card__actions{
+        overflow: visible;
+        position: absolute;
+        bottom: 0%;
+        background-color: rgb(103,58,183);
+    }
+
+    /* botao (mais produtos) */
+    .segunda #maisprodutos{
+        height: 10vh;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* para telas menores em posicao paisagem */
+@media only screen and (max-height:500px) and (orientation: landscape){
+    .segunda .mdl-card__supporting-text{ /* descricao do cartao */
+        display: none;
+    }
+}
+
+
+/* terceira pagina */
+.terceira{
+    background-image: url(cinema.jpg);
+    background-size: cover;
+    background-position: 50%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* titulo */
+.terceira #demonstracao {
+    position: absolute;
+    height: 20vh;
+    top: 216vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 300;
+    margin: 0;
+    color: white;
+}
+
+/* video */
+.terceira #video{
+    width: 96vh;
+    height: 54vh;
+}
+
+/* tela em posicao retrato */
+@media only screen and (orientation:portrait){
+    .terceira #video{
+        width: 80vw;
+        height: 45vw;
+    }
+}
+
+
+/* parte com o depoimento */
+#depoimentos{
+    background-image: url(depoimentos.png);
+    background-size: cover;
+    background-position: 50% 30%;
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* card do depoimento */
+#depoimentos .mdl-card{
+    width: 60vw;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* titulo, foto e estrelas */
+#depoimentos .mdl-card__title{
+    padding: 0;
+}
+#depoimentos .mdl-card__title ul{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+#depoimentos .mdl-card__title li{
+    display: inline-block;
+}
+#depoimentos #face{
+    height: 7vw;
+    width: 7vw;
+    padding: 15px;
+}
+#depoimentos #estrelas{
+    height: 3vw;
+}
+#depoimentos .mdl-card__title li:nth-child(1){
+    width: 20%;
+    text-align: center;
+}
+#depoimentos .mdl-card__title li:nth-child(2){
+    width: 20%;
+    text-align: center;
+}
+#depoimentos .mdl-card__title li:nth-child(3){
+    width: 55%;
+    font-weight: 500;
+}
+#depoimentos .mdl-card__title li:nth-child(3) h2{
+    font-weight: 300;
+    text-align: center;
+    font-size: 3vw;
+}
+
+/* texto do depoimento */
+#depoimentos .mdl-card__supporting-text{
+    padding: 0 10px;
+    overflow: visible;
+}
+#depoimentos .mdl-card__supporting-text p{
+    line-height: 5vh;
+    font-size: 3vh;
+    margin: 0;
+}
+
+/* botoes (setinhas) */
+#depoimentos .mdl-card__actions{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    padding: 0;
+}
+#depoimentos .mdl-card__actions button{
+    margin: 0 2vw;
+    padding: 0 5vw;
+    background-color: transparent;
+    border: 0;
+    font-size: 5vh;
+    cursor: pointer;
+}
+#depoimentos .mdl-card__actions button:active{
+    background-color: gainsboro;
+}
+
+/* muda a fonte quando em modo retrato */
+@media only screen and (orientation:portrait){
+    #depoimentos .mdl-card__supporting-text p{
+        font-size: 3vw;
+    }
+}
+
+
+/* parte do endereco */
+#endereco{
+    background-image: url(cidade.jpg);
+    background-size: cover;
+    background-position: 50%;
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* imagem do mapa */
+#endereco img{
+    height: 80%;
+}
+
+/* pergunta e endereco */
+#endereco #texto{
+    background-color: rgba(255, 255, 255, 0.6);
+    list-style: none;
+    margin: 3vw;
+    padding: 0;
+}
+#endereco h1{
+    color: black;
+    text-align: center;
+}
+#endereco p{
+    color: black;
+    padding: 3vw;
+    text-align: center;
+    font-size: 3vh;
+    line-height: normal;
+}
+
+/* remove a imagem em modo retrato */
+@media only screen and (orientation:portrait){
+    #endereco img{
+        display: none;
+    }
+}
+
+/* ajusta tamanho do rodape */
+.mdl-mini-footer{
+    height: 4vh;
+    padding: 3vh;
+}
+
+/* alarga o rodape se a tela ficar muito fina */
+@media only screen and (max-width:800px){
+    .mdl-mini-footer{
+        height: 15vh;
+    }
 }
