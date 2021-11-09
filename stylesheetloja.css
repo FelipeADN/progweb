@@ -1,0 +1,142 @@
+#fundo1{ /* fundo da primeira tela */
+    background-image: url("loja.jpg");
+    background-size: cover;
+    background-position: 50%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    color: white;
+    height: 20%;
+    margin: 0;
+    width: 100%;
+    font-size: 10vh;
+    font-weight: 300;
+}
+
+#produtos { /* container com os cards da primeira tela */
+    position: absolute;
+    bottom: 0;
+    margin: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* cada cartao */
+.mdl-card{
+    height: 65vh;
+    width: 20vw;
+    background-color: rgb(103,58,183);
+    border-radius: 10px;
+    margin: 0 2vw;
+}
+.mdl-card__title-text{ /* titulo do cartao */
+    font-weight: 400;
+    font-size: 3vh;
+}
+.mdl-card__media{ /* local da imagem do cartao */
+    height: 30vh;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+img{ /* imagem do cartao */
+    width: 100%;
+    object-fit: cover;
+}
+.mdl-card__supporting-text p{ /* descricao do cartao */
+    line-height: 1.2em;
+    font-size: 2.5vh;
+    margin: 0;
+}
+.mdl-card__supporting-text{ /*local da descricao do cartao */
+    height: 20%;
+    padding: 8px;
+    overflow: visible;
+}
+.mdl-card__actions{ /*local da descricao do cartao */
+    position: absolute;
+    bottom: 0%;
+    background-color: rgb(103,58,183);
+    display: flex;
+    justify-content: center;
+}
+
+/* botao voltar */
+#voltar{
+    position: absolute;
+    margin: 3vh;
+    bottom: 0;
+}
+
+
+
+#fundo2{ /* fundo da primeira tela */
+    background-image: url("loja2.jpg");
+    background-size: cover;
+    background-position: 50%;
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+#produtos2 { /* container com os cards da segunda tela */
+    bottom: 0;
+    margin: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* largura do cartao da segunda tela */
+#produtos2 .mdl-card{
+    width: 80vw;
+}
+
+/* quando a tela mudar de orientacao */
+@media only screen and (orientation:portrait){
+    #card4-tela1{ /* ultimo cartao da primeira tela */
+        display: none;
+    }
+
+    #card3-tela1{ /* cartao 3 da primeira tela desaparece */
+        display: none;
+    }
+
+    #card3-tela2{ /* cartao 3 aparece na segunda tela */
+        display: block;
+    }
+    
+    #card4-tela2{ /* cartao 3 aparece na segunda tela */
+        display: block;
+    }
+
+    #fundo2{ /* fundo da segunda tela */
+        display: flex;
+    }
+
+    #produtos .mdl-card{ /* largura dos cartoes da primeira tela */
+        width: 45vw;
+    }
+
+    #produtos2 .mdl-card{ /* largura dos cartoes da primeira tela */
+        width: 45vw;
+    }
+
+    #titulo { /* titulo muda de fonte */
+        font-size: 10vw;
+    }
+}
+
