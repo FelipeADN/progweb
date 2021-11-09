@@ -1,0 +1,107 @@
+#fundo{ /* fundo da tela */
+    background-image: url("carrinho.jpg");
+    background-size: 30vh;
+    height: 100%;
+    width: 100%;
+}
+
+/* titulo da pagina */
+#titulo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    color: black;
+    height: 20%;
+    margin: 0;
+    width: 100%;
+    font-size: 10vh;
+    font-weight: 300;
+}
+
+/* cartao */
+#card{
+    background-color: rgba(103,58,183, 0.3);
+    width: 100%;
+    display: inline-flex;
+    text-align: center;
+}
+/* imagem do produto */
+#card img{
+    height: 10vw;
+    width: 10vw;
+    object-fit: cover;
+}
+/* texto do card */
+#card p{
+    font-size: 2vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+/* parte da direita (quantidade, preco e botao) */
+#card #direita{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* nome do produto */
+#card #texto{
+    width: 45vw;
+    text-align: center;
+}
+#card #titulo{
+    padding-top: 0.5vh;
+    height: 25px;
+    font-size: 3vw;
+}
+#card #descricao{
+    padding-top: 0.5vh;
+    font-size: 1.5vw;
+    line-height: normal;
+}
+
+/* area da quantidade */
+#card #quanitdade{
+    margin-right: 500;
+}
+#card input{
+    width: 7vh;
+}
+
+/* area do preco */
+#card #preco{
+    margin-left: 3vw;
+    width: 16vw;
+}
+#card #preco span{ /* texto */
+    font-size: 2vw;
+}
+
+/* botao */
+#card button{
+    margin-right: 2vw;
+    font-size: 1.5vw;
+    position: absolute;
+    right: 0;
+    width: 10vw;
+    padding: 0;
+    height: 3vw;
+    line-height: 0;
+}
+
+/* para telas na vertical */
+@media only screen and (orientation:portrait){
+    #card #preco{
+        width: 13vw;
+    }
+}
+
+/* botão para voltar */
+#voltar{
+    padding-top: 15px;
+    text-align: center;
+}
